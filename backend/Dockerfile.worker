@@ -1,0 +1,18 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y \
+    gcc \
+    ffmpeg \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install poetry==1.7.1
+
+COPY pyproject.toml poetry.lock ./
+RUN poetry config virtualenvs.create false \
+    && poetry install --no-interaction --only main
+
+COPY . .
+
+CMD ["celery", "-A", "app.tasks.celery_app", "worker", "--loglevel=info"]

@@ -1,0 +1,25 @@
+# AI and ML dependencies for ClipMind
+# Install with: pip install -r requirements_ai.txt
+
+# Video Processing
+ffmpeg-python==0.2.0
+scenedetect[opencv]==0.6.2
+
+# OpenAI CLIP
+transformers==4.35.0
+torch==2.1.0
+torchvision==0.16.0
+Pillow==10.1.0
+
+# Whisper
+openai-whisper==20231117
+
+# Sentence-BERT
+sentence-transformers==2.2.2
+
+# Vector Database
+pinecone-client==2.2.4
+
+# Utilities
+numpy==1.24.3
+scipy==1.11.4
