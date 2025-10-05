@@ -267,38 +267,6 @@ clipmind/
 
 ---
 
-## Performance
-
-### Processing Benchmarks
-
-- **Video ingestion** (1080p, 10 min): 45 seconds
-- **Scene detection**: 2 minutes
-- **Transcription** (Whisper base): 3 minutes
-- **Embedding generation**: 1 minute
-- **End-to-end processing**: ~7 minutes
-- **Concurrent processing**: 50+ videos
-
-### Search Performance
-
-- **Semantic search** (P50): 120ms
-- **Semantic search** (P95): 350ms
-- **Pinecone query**: <100ms
-
-### Cost Estimate
-
-Monthly cost for 1,000 hours of video:
-
-| Service | Cost |
-|---------|------|
-| S3 Storage | $23 |
-| PostgreSQL RDS | $60 |
-| ECS Fargate | $120 |
-| Pinecone | $70 |
-| Data Transfer | $30 |
-| **Total** | **~$303/month** |
-
----
-
 ## Development
 
 ### Running Tests
@@ -329,22 +297,6 @@ flake8 app/
 # Type checking
 mypy app/
 ```
-
----
-
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Write tests for your changes
-4. Ensure all tests pass (`pytest`)
-5. Commit with clear messages (`git commit -m 'Add amazing feature'`)
-6. Push to your branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ---
 
@@ -398,7 +350,6 @@ This project uses the following open-source technologies:
 
 - **Issues**: [GitHub Issues](https://github.com/yourusername/clipmind/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/yourusername/clipmind/discussions)
-- **Email**: abhikank90@gmail.com
 
 ---
 
